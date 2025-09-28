@@ -3,13 +3,13 @@ provider "azurerm" {
   features {}
 }
 
-terraform { 
-  cloud { 
-    
-    organization = "traindevsecops" 
+terraform {
+  cloud {
 
-    workspaces { 
-      name = "resourcegroup" 
-    } 
-  } 
+    organization = "traindevsecops"
+
+    workspaces {
+      name = "resourcegroup"
+    }
+  }
 }
