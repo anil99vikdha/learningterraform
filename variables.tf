@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = "app1"
+  default     = "app2"
 }
 
 variable "location" {
@@ -12,8 +12,8 @@ variable "location" {
 
 variable "gen_rand_id" {
   description = "generate rand id"
-  type        = bool
-  default     = false
+  type        = string
+  default     = null
 }
 
 variable "environment" {
