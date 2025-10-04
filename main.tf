@@ -4,5 +4,6 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "random_id" "rg_rand_id" {
+  count       = var.gen_rand_id ? 1 : 0
   byte_length = 2
 }
