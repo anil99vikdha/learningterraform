@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = "tf-az-resource-group-tfcloud"
+  default     = "tf-az-resource-group-tfcloud-dynamic"
 }
 
 variable "location" {
