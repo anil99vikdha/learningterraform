@@ -12,7 +12,7 @@ variable "location" {
 
 variable "gen_rand_id" {
   description = "generate rand id"
-  type        = boolean
+  type        = bool
   default     = true
 }
 
