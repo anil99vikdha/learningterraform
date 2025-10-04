@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = "app2"
+  default     = "app3"
 }
 
 variable "location" {
