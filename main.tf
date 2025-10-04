@@ -4,5 +4,5 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "random_id" "rg_rand_id" {
-  byte_length = 1
+  byte_length = 2
 }
