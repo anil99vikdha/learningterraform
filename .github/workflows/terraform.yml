@@ -54,6 +54,27 @@ permissions:
   contents: read
 
 jobs:
+name: PR Title Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check-pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title format
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          echo "Checking PR title: $PR_TITLE"
+          if [[ "$PR_TITLE" =~ ^(feat:|fix!:|fix:) ]]; then
+            echo "✅ PR title is valid."
+          else
+            echo "❌ Invalid PR title. It must start with 'feat:', 'fix:', or 'fix!:'"
+            exit 1
+          fi
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
