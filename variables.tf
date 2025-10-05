@@ -16,7 +16,7 @@ variable "gen_rand_id" {
   default     = null
 }
 
-variable "environment" {
+variable "env" {
   description = "environment name"
   type        = string
   default     = "dev"
