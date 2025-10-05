@@ -45,9 +45,10 @@
 name: 'Terraform'
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - '**'   # all branches PRs
 
 permissions:
   contents: read
