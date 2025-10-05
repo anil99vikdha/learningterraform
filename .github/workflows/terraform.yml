@@ -92,3 +92,9 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false
+
+    - name: Terraform Destroy
+      # You may trigger this using PR comment commands or labels
+      # Simple example: destroy on PR close/label can be separate workflow
+      #if: false   # disable by default
+      run: terraform destroy -auto-approve -input=false
