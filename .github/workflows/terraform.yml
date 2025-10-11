@@ -53,6 +53,10 @@ on:
 permissions:
   contents: read
 
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
 jobs:
   check-pr-title:
     runs-on: ubuntu-latest
