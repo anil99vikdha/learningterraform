@@ -1,3 +1,4 @@
+# Resource group
 module "rg_testing" {
   source              = "git::https://github.com/anil99vikdha/learningterraform.git//"
   resource_group_name = module.tf-az-naming-convention.service_name["resource_group_name"]
